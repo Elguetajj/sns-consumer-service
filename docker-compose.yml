@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+
+  sns-consumer:
+    build: .
+    networks:
+      - ngrok
+
+  ngrok:
+    image: "ngrok/ngrok:alpine"
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    networks:
+      - ngrok
+    entrypoint: ["sh", "-c", "ngrok http sns-consumer:8080 --log=stdout"] 
+  
+networks:
+    ngrok:
+        driver: "bridge"
