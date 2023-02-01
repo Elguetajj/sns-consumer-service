@@ -11,5 +11,5 @@ export NGROK_AUTHTOKEN='paste_your_ngrok_token_here'
 ```
 ## How to run
  Just run `docker compose up`.
- This will create 2 containers running in the same network. One will be a container running our service built with Node.js and Express.js. The other is running the ngrok agent and establishes an https tunnel that forwards traffic into the Node.js service.
+ This will create 2 containers running in the same network. One will be a container running our service built with Node.js and Express.js. The other is running the ngrok agent and establishes an https tunnel that forwards traffic into the Node.js service. The command will automatically build the image for our service based on the dockerfile and download the ngrok container image.
  The logs of the ngrok container will show the public endpoint through which you can access the service.
