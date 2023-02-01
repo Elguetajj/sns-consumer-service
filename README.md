@@ -5,7 +5,7 @@ A simple service that processes Amazon SNS payloads from a publisher.
 
 1. Have [Docker](https://www.docker.com/) installed
 2. Have an [ngrok](https://ngrok.com/) account 
-3. Saving your ngrok token in an environment variable called `NGROK_AUTHTOKEN`. Run following command
+3. Save your ngrok token in an environment variable called `NGROK_AUTHTOKEN`. Run following command
 ```bash
 export NGROK_AUTHTOKEN='paste_your_ngrok_token_here'
 ```
